@@ -1,0 +1,32 @@
+      ..  XX  XX  ....  ....  XX
+      ..  XX  XX  ....  ....  XX
+        oo..  ooXXoooooo  oooo  
+        oo..  ooXXoooooo  oooo  
+  ..XX  oooo  oo  oooooo  oooo  
+  ..XX  oooo  oo  oooooo  oooo  
+  ....  ..oooo  XXoo  oo..  ..  
+  ....  ..oooo  XXoo  oo..  ..  
+    ..  ..  oooooo  ..ooXX..XX..
+    ..  ..  oooooo  ..ooXX..XX..
+    ..  oo  oo  ..  ..ooXX....XX
+    ..  oo  oo  ..  ..ooXX....XX
+      XX..oo..  ..oo  ..  XXXX..
+      XX..oo..  ..oo  ..  XXXX..
+        ....  XX  ......  ..XX..
+        ....  XX  ......  ..XX..
+    ..XX..XX..XX..XX..  ..XX..XX
+    ..XX..XX..XX..XX..  ..XX..XX
+  ....XX  ..XXXX..  XX..  ....XX
+  ....XX  ..XXXX..  XX..  ....XX
+..XX  ......  ......  ......  XX
+..XX  ......  ......  ......  XX
+XX..  ......XX..  ..XXXX....  XX
+XX..  ......XX..  ..XXXX....  XX
+  ..XX..XXXX..XX..XX....XX..XX..
+  ..XX..XXXX..XX..XX....XX..XX..
+  ....XX........XX........XX....
+  ....XX........XX........XX....
+........XX....XX..XX......XX....
+........XX....XX..XX......XX....
+......XX..XXXX......XX......XX..
+......XX..XXXX......XX......XX..
