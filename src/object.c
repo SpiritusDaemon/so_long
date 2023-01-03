@@ -17,7 +17,7 @@ void xpm_to_image()
 	object()->object[CHAR_RIGHT] = mlx_xpm_file_to_image(program()->mlx,"./xpm_files/character_right.xpm", &object()->width, &object()->height);
 	object()->object[WALLPAPER] =  mlx_xpm_file_to_image(program()->mlx,"./xpm_files/wallpaper.xpm", &object()->width, &object()->height);
 	object()->object[BLOCK] =  mlx_xpm_file_to_image(program()->mlx,"./xpm_files/block.xpm", &object()->width, &object()->height);
-	object()->object[WALLPAPER] = mlx_xpm_file_to_image(program()->mlx ,"./xpm_files/wallpaper.xpm", &object()->width, &object()->height);
+	object()->object[COIN] = mlx_xpm_file_to_image(program()->mlx ,"./xpm_files/heart.xpm", &object()->width, &object()->height);
 }
 
 /* static void create_character_up()

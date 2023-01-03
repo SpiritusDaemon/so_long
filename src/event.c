@@ -17,7 +17,7 @@ t_move *position()
 }
 
 void define_pos(int keycode)
-{
+{	
 	switch (keycode)
 	{
 	case W:
