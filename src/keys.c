@@ -1,5 +1,8 @@
 #include <../Headers/keys.h>
 #include <../Headers/event.h>
+#include "../Headers/world.h"
+#include "../Headers/libft_headers/ft_printf.h"
+#include "../Headers/map_parsing.h"
 
 t_keys *keycodes()
 {
@@ -9,6 +12,7 @@ t_keys *keycodes()
 
 int key_press(int keycode)
 {
+
 	ft_printf("pressed: %i\n", keycodes()->keys[keycode]);
 	if (keycode)
 		keycodes()->keys[keycode] = keycode;

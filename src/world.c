@@ -3,6 +3,7 @@
 #include <../Headers/object.h>
 #include <../Headers/canvas.h>
 #include <../Headers/program_init.h>
+#include "../Headers/event.h"
 
 void generate_world()
 {
@@ -15,14 +16,20 @@ void generate_world()
 	{
 		while(map()->map[y][++x])
 		{
-				if(map()->map[y][x] == '1')
-					mlx_put_image_to_window(program()->mlx, program()->win, object()->object[BLOCK], x * 32, y * 32);
-				if(map()->map[y][x] == '0')
-					mlx_put_image_to_window(program()->mlx, program()->win,object()->object[WALLPAPER], x * 32, y * 32);		
-				if(map()->map[y][x] == 'C')
-					mlx_put_image_to_window(program()->mlx, program()->win,object()->object[COIN], x * 32, y * 32);		
-
-		}
+			if(map()->map[y][x] == '1')
+				mlx_put_image_to_window(program()->mlx, program()->win, object()->object[BLOCK], x * 32, y * 32);
+			if(map()->map[y][x] == '0')
+				mlx_put_image_to_window(program()->mlx, program()->win,object()->object[WALLPAPER], x * 32, y * 32);		
+			if(map()->map[y][x] == 'C')
+				mlx_put_image_to_window(program()->mlx, program()->win,object()->object[WALLPAPER], x * 32, y * 32);
+			if(map()->map[y][x] == 'P')
+			{
+				position()->pos_y = y;
+				position()->pos_x += x;	
+				mlx_put_image_to_window(program()->mlx, program()->win,object()->object[WALLPAPER], x * 32, y * 32);
+				mlx_put_image_to_window(program()->mlx, program()->win,object()->object[CHAR_RIGHT], x * 32, y * 32);
+			}
+	}
 		x = -1;
 	}
 }

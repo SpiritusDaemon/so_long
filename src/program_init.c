@@ -27,10 +27,9 @@ void program_init()
 	}
 	program()->height = y * 32;
 	program()->width = x * 32;
-	ft_printf("valor de width:%i + valor de height:%i\n", program()->width, program()->height);
-
 	program()->mlx = mlx_init();
 	program()->win = mlx_new_window(program()->mlx, program()->width,program()->height, "so_long");
+	program()->image = mlx_new_image(program()->mlx, program()->x, program()->y);
 }
 
 int	update(void)

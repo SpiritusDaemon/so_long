@@ -2,6 +2,8 @@
 #include <../Headers/keys.h>
 #include <../Headers/program_init.h>
 #include <../Headers/object.h>
+#include "../Headers/map_parsing.h"
+#include "../Headers/libft_headers/ft_printf.h"
 
 static void end_program()
 {
@@ -18,46 +20,34 @@ t_move *position()
 
 void define_pos(int keycode)
 {	
-	switch (keycode)
-	{
-	case W:
-		position()->pos_y -= 20;
-		break;
-	case S:
-		position()->pos_y += 20;
-		break;
-	case A:
-		position()->pos_x -= 20;
-		break;
-	case D:
-		position()->pos_x += 20; 
-		break;
-	default:
-		break;
-	}
+	if (keycode == W)
+		if (map()->map[position()->pos_y - 1][position()->pos_x] != '1')	
+			position()->pos_y -= 1;
+	if (keycode == S)
+		if (map()->map[position()->pos_y + 1][position()->pos_x] != '1')
+			position()->pos_y += 1;
+	if (keycode == A)
+		if (map()->map[position()->pos_y][position()->pos_x - 1] != '1')
+			position()->pos_x -= 1;	
+	if (keycode == D)	
+		if (map()->map[position()->pos_y][position()->pos_x + 1] != '1')
+			position()->pos_x += 1;	
 	position()->key = keycode;
 	move();
+	return;
 }
 
 void move()
 {
-	switch (position()->key)
-	{
-		case W:
-			mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_UP], position()->pos_x, position()->pos_y);
-		break;
-		case S:
-			mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_DOWN], position()->pos_x, position()->pos_y);
-		break;
-		case A:
-			mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_LEFT], position()->pos_x, position()->pos_y);
-		break;
-		case D:
-			mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_RIGHT], position()->pos_x, position()->pos_y);
-		break;
-		case ESC:
-			 end_program();
-		break;
-	}
+	if (position()->key == W)
+		mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_UP], position()->pos_x * 32, position()->pos_y * 32);
+	if (position()->key == S)
+		mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_DOWN], position()->pos_x * 32, position()->pos_y * 32);
+	if (position()->key == A)
+		mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_LEFT], position()->pos_x * 32, position()->pos_y * 32);
+	if (position()->key == D)
+		mlx_put_image_to_window(program()->mlx, program()->win, object()->object[CHAR_RIGHT], position()->pos_x * 32, position()->pos_y * 32);
+	if (position()->key == ESC)
+			end_program();
 }
 

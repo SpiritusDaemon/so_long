@@ -10,7 +10,7 @@
 	#define S 1
 	#define D 2
 	#define W  13
-#else
+#elif defined (__linux__)
 	#define ESC 65307
 	#define A 97
 	#define S 115

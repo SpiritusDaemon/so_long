@@ -12,10 +12,12 @@ typedef struct s_program_init
 {
 	void *mlx;
 	void *win;
+	void *image;
 	int width;
 	int height;
 	int x;
 	int y;
+
 }t_program_init;
 
 t_program_init *program();
